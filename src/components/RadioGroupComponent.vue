@@ -1,6 +1,6 @@
 <template>
 <div class="custom-radio-group">
-    <RadioGroup v-model="currentValue" @change="updateRadio()">
+    <RadioGroup v-model="currentValue" @on-change="updateRadio()">
         <Radio v-for="radio in radioList" :key="radio.id" :label="radio.id" >
             <Icon v-if="radio.iconType" :type="radio.iconType"></Icon>
             <span>{{ radio.title }}</span>
@@ -48,6 +48,19 @@
 </script>
 
 <style scoped>
+.custom-radio-group >>> .ivu-radio {
+    margin-right: 14px;
+}
+.custom-radio-group >>> .ivu-radio-wrapper {
+    display: flex;
+}
+.custom-radio-group >>> .ivu-radio-wrapper span {
+    white-space: normal;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
 .custom-radio-group >>> .ivu-radio-wrapper:not(:first-child) {
     margin-top: 24px;
 }

@@ -9,6 +9,8 @@ import VueMask from 'v-mask';
 
 import ymapPlugin  from 'vue-yandex-maps';
 
+import _ from 'lodash';
+
 /*const settings = {
   apiKey: '8043c711-95d9-4162-8d61-852ab2b067ab',
   lang: 'ru_RU',
@@ -16,6 +18,7 @@ import ymapPlugin  from 'vue-yandex-maps';
   version: '2.1',
 };*/
 
+Vue.use(_);
 Vue.use(ymapPlugin);
 Vue.use(VueMask);
 Vue.use(ViewUI, { locale });

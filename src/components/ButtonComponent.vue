@@ -1,6 +1,6 @@
 <template>
 <div class="custom-button">
-    <button>
+    <button @click="$emit('click')">
         <slot></slot>
     </button>
 </div>
@@ -16,6 +16,7 @@ export default {
 .custom-button {
     display: flex;
     justify-content: flex-end;
+    width: 100%;
 }
 .custom-button button:hover {
     background-color: rgb(0, 129, 188);
